@@ -79,35 +79,3 @@ def ComputeReactions(nodes):
         pin_yreaction -= roller_reaction
         pin_node.AddReactionYForce(pin_yreaction)
         pin_node.AddReactionXForce(pin_xreaction)
-            
-    #Code I was told should work but does not work.
-    #pin_yreaction = 0
-    #for node in nodes:
-    #    pin_yreaction -= node.yforce_external
-    #if (roller_node.constraint=="roller_no_ydisp"):
-    #    pin_yreaction -= roller_reaction
-    #    pin_node.AddReactionYForce(-pin_yreaction)
-    
-    #pin_xreaction = 0
-    #for node in nodes:
-    #    pin_xreaction -= node.xforce_external
-    #if (roller_node.constraint=="roller_no_xdisp"):
-    #    pin_xreaction -= roller_reaction
-    #    pin_node.AddReactionYForce(-pin_yreaction)  
-
-    #Previous Attempt
-    
-    #pin_yreaction = 0
-    #pin_xreaction = 0
-    #for node in nodes:       
-        #if(roller_node.constraint=="roller_no_xdisp"): # roller w/ x-react
-            #pin_yreaction = -node.yforce_external 
-            #pin_node.AddReactionYForce(pin_yreaction)
-            #pin_xreaction = -node.xforce_external-roller_reaction
-            #pin_node.AddReactionXForce(pin_xreaction)
-            
-        #elif(roller_node.constraint=="roller_no_ydisp"): # roller w/ y-react
-            #pin_yreaction = -node.yforce_external-roller_reaction
-            #pin_node.AddReactionYForce(pin_yreaction)
-            #pin_xreaction = -node.xforce_external #Sum of x forces
-            #pin_node.AddReactionXForce(pin_xreaction)
