@@ -75,11 +75,11 @@ def DotProduct(vec1,vec2):
 
 # Cosine of angle from local x vector direction to other vector
 def CosineVectors(local_x_vec,other_vec):
-    return DotProduct(local_x_vec,other_vec)/(VectorTwoNorm[local_x_vec]*VectorTwoNorm[other_vec])
+    return DotProduct(local_x_vec,other_vec)/(VectorTwoNorm(local_x_vec)*VectorTwoNorm(other_vec))
 
 # Sine of angle from local x vector direction to other vector
 def SineVectors(local_x_vec,other_vec):
-    return TwoDCrossProduct(local_x_vec,other_vec)/(VectorTwoNorm[local_x_vec]*VectorTwoNorm[other_vec])
+    return TwoDCrossProduct(local_x_vec,other_vec)/(VectorTwoNorm(local_x_vec)*VectorTwoNorm(other_vec))
 
 # Cosine of angle from local x bar to the other bar
 def CosineBars(local_x_bar,other_bar):
